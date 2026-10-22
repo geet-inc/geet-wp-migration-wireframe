@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WordPress脱却・移行サービス LP ワイヤーフレーム</title>
+<title>WordPress移行サービス LP ワイヤーフレーム</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -43,11 +43,9 @@ section { padding: 112px 0; }
 /* ボタン */
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
-  padding: 16px 32px; border-radius: 4px; font-weight: 500; font-size: 14px;
+  padding: 16px 40px; border-radius: 4px; font-weight: 500; font-size: 14px;
   background: var(--text); color: #fff;
 }
-.btn-line { background: #fff; color: var(--text); border: 1px solid var(--text); }
-.btn-row { display: flex; gap: 16px; flex-wrap: wrap; }
 
 /* グレーボックス */
 .ph {
@@ -71,8 +69,6 @@ header .container { display: flex; align-items: center; justify-content: space-b
 .fv h1 { font-size: 38px; line-height: 1.45; margin-bottom: 24px; }
 .fv-lead { color: var(--text-sub); margin-bottom: 40px; }
 .fv-lead p + p { margin-top: 6px; }
-.fv-points { display: flex; gap: 24px; margin-top: 40px; font-size: 12px; color: var(--text-sub); flex-wrap: wrap; }
-.fv-points i { margin-right: 6px; color: var(--text); }
 .ph-fv { aspect-ratio: 4 / 3; }
 
 /* お悩み */
@@ -85,77 +81,32 @@ header .container { display: flex; align-items: center; justify-content: space-b
 /* 原因 */
 .cause { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 .ph-diagram { aspect-ratio: 4 / 3; }
-.cause-list li { padding: 20px 0; display: flex; gap: 16px; }
-.cause-list li + li { border-top: 1px solid var(--border); }
-.num { font-size: 13px; font-weight: 700; min-width: 28px; }
-.cause-list h3 { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
-.cause-list p { color: var(--text-sub); font-size: 13px; }
 
 /* 解決策 */
-.ph-arch { aspect-ratio: 21 / 9; margin-bottom: 48px; }
-.solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.solution-grid h3 { font-size: 16px; font-weight: 500; margin: 16px 0 8px; }
-.solution-grid p { color: var(--text-sub); font-size: 13px; }
-.solution-grid i { font-size: 22px; }
+.ph-arch { aspect-ratio: 21 / 9; }
 
 /* 効果 */
-.merit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.merit { display: grid; grid-template-columns: 160px 1fr; gap: 28px; background: #fff; padding: 28px; border-radius: 4px; align-items: center; }
-.ph-merit { aspect-ratio: 1 / 1; }
+.merit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.ph-merit { aspect-ratio: 4 / 3; margin-bottom: 20px; }
 .merit h3 { font-size: 17px; font-weight: 500; margin-bottom: 8px; }
 .merit p { color: var(--text-sub); font-size: 13px; }
 
-/* 比較表 */
-.compare { width: 100%; border-collapse: collapse; font-size: 13px; }
-.compare th, .compare td { padding: 18px 20px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
-.compare thead th { font-weight: 500; color: var(--text-sub); font-size: 12px; }
-.compare thead th:last-child { color: var(--text); font-weight: 700; }
-.compare tbody th { font-weight: 500; width: 20%; }
-.compare td:last-child { font-weight: 500; }
-.compare td:last-child i { margin-right: 6px; }
-.table-wrap { overflow-x: auto; }
-
-/* 更新・運用 */
-.cms { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.ph-cms { aspect-ratio: 16 / 10; }
-.check-list li { padding-left: 28px; position: relative; margin-bottom: 12px; }
-.check-list li i { position: absolute; left: 0; top: 5px; }
-
 /* 流れ */
-.flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
-.step { background: #fff; padding: 28px 20px; border-radius: 4px; }
+.flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.step { background: #fff; padding: 28px 24px; border-radius: 4px; }
 .step-num { font-size: 12px; color: var(--text-sub); margin-bottom: 12px; }
 .step i { font-size: 20px; margin-bottom: 12px; display: block; }
 .step h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
-.step p { color: var(--text-sub); font-size: 12px; }
-.step-term { font-size: 12px; margin-top: 12px; color: var(--text-sub); }
-.flow-note { margin-top: 24px; font-size: 12px; color: var(--text-sub); }
+.step p { color: var(--text-sub); font-size: 13px; }
 
 /* 料金 */
-.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.price { border: 1px solid var(--border); padding: 40px 32px; border-radius: 4px; display: flex; flex-direction: column; }
-.price.featured { border-color: var(--text); }
-.price-badge { font-size: 12px; margin-bottom: 8px; color: var(--text-sub); min-height: 20px; }
-.price h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-.price-target { font-size: 12px; color: var(--text-sub); margin-bottom: 24px; }
-.price-amount { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+.price-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.price { border: 1px solid var(--border); padding: 40px; border-radius: 4px; }
+.price h3 { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
+.price-desc { font-size: 13px; color: var(--text-sub); margin-bottom: 24px; }
+.price-amount { font-size: 28px; font-weight: 700; }
 .price-amount small { font-size: 13px; font-weight: 400; }
-.price-note { font-size: 12px; color: var(--text-sub); margin-bottom: 24px; }
-.price ul { font-size: 13px; flex: 1; }
-.price li { padding: 8px 0; }
-.price li i { margin-right: 8px; width: 14px; }
-.running { margin-top: 40px; background: var(--bg-sub); padding: 32px; border-radius: 4px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
-.running h3 { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
-.running p { font-size: 13px; color: var(--text-sub); }
-.running-amount { font-size: 22px; font-weight: 700; }
-
-/* 事例 */
-.case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-.ph-case { aspect-ratio: 16 / 10; margin-bottom: 20px; }
-.case-tag { font-size: 12px; color: var(--text-sub); margin-bottom: 4px; }
-.case h3 { font-size: 15px; font-weight: 500; margin-bottom: 12px; }
-.case-data { display: flex; gap: 20px; font-size: 12px; }
-.case-data strong { font-size: 18px; display: block; }
+.price-note { margin-top: 24px; font-size: 12px; color: var(--text-sub); }
 
 /* FAQ */
 .faq dt { font-weight: 500; padding: 24px 0 8px; display: flex; gap: 16px; justify-content: space-between; }
@@ -166,8 +117,6 @@ header .container { display: flex; align-items: center; justify-content: space-b
 .cta-box { text-align: center; }
 .cta-box h2 { font-size: 28px; margin-bottom: 16px; line-height: 1.5; }
 .cta-box p { color: var(--text-sub); margin-bottom: 40px; }
-.cta-box .btn-row { justify-content: center; }
-.cta-sub { margin-top: 24px; font-size: 12px; color: var(--text-sub); }
 
 /* フッター */
 footer { padding: 64px 0 40px; font-size: 12px; color: var(--text-sub); }
@@ -184,17 +133,13 @@ footer .container { display: flex; justify-content: space-between; gap: 40px; fl
   section { padding: 72px 0; }
   .gnav a:not(.btn) { display: none; }
   .fv { padding: 40px 0 72px; }
-  .fv .container, .cause, .cms { grid-template-columns: 1fr; gap: 40px; }
+  .fv .container, .cause { grid-template-columns: 1fr; gap: 40px; }
   .fv h1 { font-size: 28px; }
   .sec-title { font-size: 22px; }
   .sec-lead { margin-bottom: 40px; }
-  .worry-grid, .solution-grid, .merit-grid, .price-grid, .case-grid { grid-template-columns: 1fr; }
-  .merit { grid-template-columns: 96px 1fr; gap: 20px; padding: 20px; }
-  .flow { grid-template-columns: 1fr; }
+  .worry-grid, .merit-grid, .price-grid, .flow { grid-template-columns: 1fr; }
   .ph-arch { aspect-ratio: 4 / 3; }
-  .running { grid-template-columns: 1fr; }
-  .btn-row .btn { width: 100%; justify-content: center; }
-  .compare { min-width: 600px; }
+  .btn { width: 100%; justify-content: center; }
   .cta-box h2 { font-size: 22px; }
 }
 </style>
@@ -207,7 +152,6 @@ footer .container { display: flex; justify-content: space-between; gap: 40px; fl
     <div class="ph logo">ロゴ</div>
     <nav class="gnav">
       <a href="#solution">しくみ</a>
-      <a href="#merit">効果</a>
       <a href="#flow">流れ</a>
       <a href="#price">料金</a>
       <a href="#faq">よくある質問</a>
@@ -223,19 +167,12 @@ footer .container { display: flex; justify-content: space-between; gap: 40px; fl
       <span class="fv-tag">WordPressの脆弱性対策</span>
       <h1>WordPressの不安から、<br>サイトを解放します。</h1>
       <div class="fv-lead">
-        <p>PHPで動くサイトを、「Next.js」に書き換えます。</p>
-        <p>公開後は、「Cloudflare」で守りながら、わたしたちが運用します。</p>
+        <p>いまのサイトを、狙われにくい安全なしくみへ、まるごと引っ越します。</p>
+        <p>引っ越したあとの見守りも、わたしたちにお任せください。</p>
       </div>
-      <div class="btn-row">
-        <a href="#cta" class="btn"><i class="fa-regular fa-envelope"></i>お問い合わせ</a>
-      </div>
-      <ul class="fv-points">
-        <li><i class="fa-solid fa-shield-halved"></i>攻撃される入口を、なくす</li>
-        <li><i class="fa-solid fa-bolt"></i>表示が、速くなる</li>
-        <li><i class="fa-solid fa-pen-to-square"></i>更新は、これまでどおり</li>
-      </ul>
+      <a href="#cta" class="btn"><i class="fa-regular fa-envelope"></i>お問い合わせ</a>
     </div>
-    <div class="ph ph-fv"><i class="fa-regular fa-image"></i>メインビジュアル（WordPress → Next.js × Cloudflare の移行イメージ）</div>
+    <div class="ph ph-fv"><i class="fa-regular fa-image"></i>メインビジュアル（不安なサイトが、安全な場所へ引っ越すイメージ）</div>
   </div>
 </section>
 
@@ -243,41 +180,23 @@ footer .container { display: flex; justify-content: space-between; gap: 40px; fl
 <section class="bg-sub">
   <div class="container">
     <p class="sec-label center">こんなお悩み、ありませんか</p>
-    <h2 class="sec-title center">脆弱性のニュースを見るたびに、<br>不安になっていませんか。</h2>
-    <div class="sec-lead center">
-      <p>WordPressは、世界でいちばん使われているCMSです。</p>
-      <p>そのぶん、攻撃のねらい目にもなっています。</p>
-    </div>
+    <h2 class="sec-title center">「うちのサイトは、大丈夫かな」</h2>
+    <p class="sec-lead center">WordPressは、世界でいちばん使われているぶん、狙われやすいしくみです。</p>
     <div class="worry-grid">
       <div class="worry">
         <i class="fa-solid fa-triangle-exclamation"></i>
-        <h3>脆弱性が、また見つかった</h3>
-        <p>本体やプラグインの脆弱性が、毎月のように報告されます。対応が、追いつきません。</p>
+        <h3>脆弱性のニュースが、不安</h3>
+        <p>「WordPressに弱点が見つかった」と聞くたびに、うちは平気か、気になります。</p>
       </div>
       <div class="worry">
-        <i class="fa-solid fa-plug-circle-xmark"></i>
-        <h3>アップデートが、こわい</h3>
-        <p>更新すると、表示がくずれることがあります。結果として、古いまま放置しがちです。</p>
-      </div>
-      <div class="worry">
-        <i class="fa-solid fa-user-secret"></i>
-        <h3>改ざんや、乗っ取りが心配</h3>
-        <p>ログイン画面への攻撃や、不正なファイルの設置。気づいたときには、手遅れです。</p>
-      </div>
-      <div class="worry">
-        <i class="fa-solid fa-gauge-simple"></i>
-        <h3>表示が、おそい</h3>
-        <p>プラグインが増えるほど、ページは重くなります。離脱や、検索順位にも響きます。</p>
-      </div>
-      <div class="worry">
-        <i class="fa-solid fa-coins"></i>
-        <h3>保守の費用が、かさむ</h3>
-        <p>サーバー代、セキュリティ対策、更新作業。見えないコストが、積み上がります。</p>
+        <i class="fa-solid fa-rotate"></i>
+        <h3>更新作業に、手が回らない</h3>
+        <p>「更新してください」と言われても、やり方がわからず、そのままになっています。</p>
       </div>
       <div class="worry">
         <i class="fa-solid fa-person-circle-question"></i>
         <h3>つくった人が、もういない</h3>
-        <p>制作会社や担当者と、連絡がつかない。中身がわからず、手が出せません。</p>
+        <p>制作会社や担当者と、連絡がつかない。だれに相談すればいいか、わかりません。</p>
       </div>
     </div>
   </div>
@@ -288,16 +207,15 @@ footer .container { display: flex; justify-content: space-between; gap: 40px; fl
   <div class="container">
     <div class="cause">
       <div>
-        <p class="sec-label">なぜ、WordPressは狙われるのか</p>
-        <h2 class="sec-title">原因は、「しくみ」そのものにあります。</h2>
-        <p class="sec-lead" style="margin-bottom:32px;">アクセスのたびに、サーバーでPHPが動きます。つまり、攻撃できる入口が、常に開いている状態です。</p>
-        <ul class="cause-list">
-          <li><span class="num">01</span><div><h3>サーバーで、プログラムが動き続ける</h3><p>PHPとデータベースが、外からの要求に毎回こたえます。</p></div></li>
-          <li><span class="num">02</span><div><h3>プラグインが、入口を増やす</h3><p>入れるほど便利です。ただし、そのぶん弱点も増えます。</p></div></li>
-          <li><span class="num">03</span><div><h3>管理画面が、だれでも見つけられる</h3><p>「/wp-admin」は、攻撃者にとっても有名な場所です。</p></div></li>
-        </ul>
+        <p class="sec-label">なぜ、狙われるのか</p>
+        <h2 class="sec-title">WordPressは、<br>「玄関が開いたままの家」です。</h2>
+        <div class="sec-lead" style="margin-bottom:0;">
+          <p>WordPressのサイトは、見られるたびに、裏側でしくみが動いています。</p>
+          <p>そのため、外から入りこめる「すき間」が、いつも開いている状態です。</p>
+          <p>こまめに更新し続けないと、そのすき間を狙われてしまいます。</p>
+        </div>
       </div>
-      <div class="ph ph-diagram"><i class="fa-solid fa-diagram-project"></i>図：WordPressの構成と攻撃される入口（PHP・DB・プラグイン・管理画面）</div>
+      <div class="ph ph-diagram"><i class="fa-solid fa-house-crack"></i>図：玄関が開いた家に、不審者が近づくイラスト</div>
     </div>
   </div>
 </section>
@@ -306,245 +224,112 @@ footer .container { display: flex; justify-content: space-between; gap: 40px; fl
 <section class="bg-sub" id="solution">
   <div class="container">
     <p class="sec-label center">わたしたちの解決策</p>
-    <h2 class="sec-title center">Next.jsで書き換えて、<br>Cloudflareで守ります。</h2>
+    <h2 class="sec-title center">サイトを、<br>「狙われにくい家」へ引っ越します。</h2>
     <div class="sec-lead center">
-      <p>WordPressを、まるごと卒業します。</p>
-      <p>見た目や内容は、そのまま引き継げます。</p>
+      <p>見た目や内容は、いまのまま。</p>
+      <p>中のしくみだけを、すき間のない安全なものに入れかえます。</p>
     </div>
-    <div class="ph ph-arch"><i class="fa-solid fa-diagram-project"></i>構成図：Before（WordPress＋レンタルサーバー）／ After（Next.js＋ヘッドレスCMS＋Cloudflare）</div>
-    <div class="solution-grid">
-      <div>
-        <i class="fa-solid fa-code"></i>
-        <h3>PHPを、Next.jsに書き換え</h3>
-        <p>ページを、あらかじめ静的に書き出します。サーバーで動くプログラムが、なくなります。</p>
-      </div>
-      <div>
-        <i class="fa-solid fa-cloud"></i>
-        <h3>Cloudflareで、配信と防御</h3>
-        <p>世界中の拠点から、ページを届けます。不正なアクセスは、手前でブロックします。</p>
-      </div>
-      <div>
-        <i class="fa-solid fa-pen-to-square"></i>
-        <h3>更新は、使いやすいCMSで</h3>
-        <p>管理画面は、サイトと切りはなします。お知らせやブログも、これまでどおり更新できます。</p>
-      </div>
-    </div>
+    <div class="ph ph-arch"><i class="fa-solid fa-diagram-project"></i>図：いまのサイト（すき間だらけ）→ 引っ越し後（すき間がなく、見守りつき）のビフォーアフター</div>
+    <p class="memo center">※具体的な技術名は、ここでは出さない（今後の変更に備える）</p>
   </div>
 </section>
 
 <!-- 5. 効果 -->
-<section id="merit">
-  <div class="container">
-    <p class="sec-label center">移行で、得られること</p>
-    <h2 class="sec-title center">安全になるだけでは、ありません。</h2>
-    <p class="sec-lead center">速さも、運用のしやすさも、いっしょに手に入ります。</p>
-    <div class="merit-grid">
-      <div class="merit bg-sub">
-        <div class="ph ph-merit"><i class="fa-solid fa-shield-halved"></i></div>
-        <div><h3>安全になる</h3><p>サーバーで動くPHPが、なくなります。プラグインの脆弱性に、おびえる必要もありません。</p></div>
-      </div>
-      <div class="merit bg-sub">
-        <div class="ph ph-merit"><i class="fa-solid fa-bolt"></i></div>
-        <div><h3>速くなる</h3><p>表示速度は、目安で数倍に。体感の速さが、成果にもつながります。</p></div>
-      </div>
-      <div class="merit bg-sub">
-        <div class="ph ph-merit"><i class="fa-solid fa-mug-hot"></i></div>
-        <div><h3>保守が、楽になる</h3><p>本体やプラグインの、更新作業がなくなります。「更新したら壊れた」も、起きません。</p></div>
-      </div>
-      <div class="merit bg-sub">
-        <div class="ph ph-merit"><i class="fa-solid fa-arrow-trend-down"></i></div>
-        <div><h3>費用を、おさえられる</h3><p>Cloudflareは、配信コストが低いのが特長です。サーバー代を、見直せます。</p></div>
-      </div>
-    </div>
-    <p class="memo center">※数値（表示速度・費用）は、実測や試算が出しだい差し替え</p>
-  </div>
-</section>
-
-<!-- 6. 比較表 -->
-<section class="bg-sub">
-  <div class="container narrow">
-    <p class="sec-label center">比べてみると</p>
-    <h2 class="sec-title center">WordPressと、移行後のちがい</h2>
-    <p class="sec-lead center">ひと目で、わかるように比べました。</p>
-    <div class="table-wrap">
-      <table class="compare">
-        <thead>
-          <tr><th></th><th>いまのWordPress</th><th>移行後（Next.js × Cloudflare）</th></tr>
-        </thead>
-        <tbody>
-          <tr><th>セキュリティ</th><td>PHPやプラグインに、脆弱性が出やすい</td><td><i class="fa-solid fa-check"></i>攻撃される入口が、ほぼない</td></tr>
-          <tr><th>表示速度</th><td>アクセスのたびに、ページを生成する</td><td><i class="fa-solid fa-check"></i>書き出し済みのページを、近くから配信</td></tr>
-          <tr><th>保守作業</th><td>本体とプラグインの、更新が必要</td><td><i class="fa-solid fa-check"></i>更新作業は、ほぼ不要</td></tr>
-          <tr><th>アクセス集中</th><td>サーバーが、落ちることがある</td><td><i class="fa-solid fa-check"></i>Cloudflareが、負荷を受け止める</td></tr>
-          <tr><th>コンテンツ更新</th><td>WordPressの管理画面</td><td><i class="fa-solid fa-check"></i>ヘッドレスCMSで、同じように更新</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- 7. 更新・運用の不安 -->
 <section>
   <div class="container">
-    <div class="cms">
-      <div class="ph ph-cms"><i class="fa-regular fa-window-maximize"></i>画面：ヘッドレスCMSの編集画面イメージ</div>
-      <div>
-        <p class="sec-label">移行したあとも、安心です</p>
-        <h2 class="sec-title">更新は、いままでどおり。<br>運用は、わたしたちが。</h2>
-        <p class="sec-lead" style="margin-bottom:32px;">「むずかしくなるのでは」と、心配はいりません。日々の更新は、使いやすい管理画面でおこなえます。</p>
-        <ul class="check-list">
-          <li><i class="fa-solid fa-check"></i>お知らせ、ブログ、実績は、管理画面から更新できます。</li>
-          <li><i class="fa-solid fa-check"></i>既存の記事や画像は、まとめて移しかえます。</li>
-          <li><i class="fa-solid fa-check"></i>URLを引き継ぎ、検索順位への影響をおさえます。</li>
-          <li><i class="fa-solid fa-check"></i>Cloudflareの設定と監視は、わたしたちが担当します。</li>
-        </ul>
+    <p class="sec-label center">引っ越すと、こう変わります</p>
+    <h2 class="sec-title center">安心も、速さも、手に入ります。</h2>
+    <p class="sec-lead center">更新作業から、解放されます。</p>
+    <div class="merit-grid">
+      <div class="merit">
+        <div class="ph ph-merit"><i class="fa-solid fa-shield-halved"></i>イラスト</div>
+        <h3>狙われにくくなる</h3>
+        <p>入りこめる「すき間」が、ほとんどなくなります。脆弱性のニュースに、おびえずにすみます。</p>
+      </div>
+      <div class="merit">
+        <div class="ph ph-merit"><i class="fa-solid fa-bolt"></i>イラスト</div>
+        <h3>表示が、速くなる</h3>
+        <p>ページが、さっと開くようになります。見る人の、ストレスが減ります。</p>
+      </div>
+      <div class="merit">
+        <div class="ph ph-merit"><i class="fa-solid fa-mug-hot"></i>イラスト</div>
+        <h3>面倒な作業が、なくなる</h3>
+        <p>こまめな更新作業は、もう必要ありません。お知らせやブログは、これまでどおり書けます。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 8. 流れ -->
+<!-- 6. 流れ -->
 <section class="bg-sub" id="flow">
   <div class="container">
-    <p class="sec-label center">移行の流れ</p>
-    <h2 class="sec-title center">サイトを止めずに、移行します。</h2>
-    <p class="sec-lead center">公開の切り替えまで、いまのサイトは動いたままです。</p>
+    <p class="sec-label center">引っ越しの流れ</p>
+    <h2 class="sec-title center">サイトを止めずに、引っ越します。</h2>
+    <p class="sec-lead center">切り替えの日まで、いまのサイトはそのまま見られます。</p>
     <div class="flow">
-      <div class="step"><p class="step-num">STEP 1</p><i class="fa-regular fa-comments"></i><h3>お問い合わせ・ヒアリング</h3><p>いまのサイトの状況や、ご要望をうかがいます。</p><p class="step-term">約1週間</p></div>
-      <div class="step"><p class="step-num">STEP 2</p><i class="fa-regular fa-clipboard"></i><h3>移行プランの提案</h3><p>ページ数や機能から、進め方とお見積もりを出します。</p><p class="step-term">約1週間</p></div>
-      <div class="step"><p class="step-num">STEP 3</p><i class="fa-solid fa-code"></i><h3>書き換え・移行</h3><p>Next.jsで再構築し、記事や画像を移しかえます。</p><p class="step-term">約1〜2か月</p></div>
-      <div class="step"><p class="step-num">STEP 4</p><i class="fa-solid fa-rocket"></i><h3>公開の切り替え</h3><p>確認をへて、Cloudflareへ切り替えます。</p><p class="step-term">1日</p></div>
-      <div class="step"><p class="step-num">STEP 5</p><i class="fa-solid fa-shield-halved"></i><h3>運用・保守</h3><p>監視や、小さな修正を続けます。</p><p class="step-term">月額</p></div>
+      <div class="step"><p class="step-num">STEP 1</p><i class="fa-regular fa-comments"></i><h3>お問い合わせ・ヒアリング</h3><p>いまのサイトの状況や、ご要望をうかがいます。</p></div>
+      <div class="step"><p class="step-num">STEP 2</p><i class="fa-regular fa-clipboard"></i><h3>ご提案・お見積もり</h3><p>サイトの規模にあわせて、進め方と費用をお伝えします。</p></div>
+      <div class="step"><p class="step-num">STEP 3</p><i class="fa-solid fa-box-open"></i><h3>引っ越し作業</h3><p>見た目と内容を、そのまま新しいしくみへ移します。</p></div>
+      <div class="step"><p class="step-num">STEP 4</p><i class="fa-solid fa-shield-halved"></i><h3>公開・見守り</h3><p>切り替えたあとも、わたしたちが見守ります。</p></div>
     </div>
-    <p class="flow-note center">※期間は、ページ数や機能によって変わります。</p>
   </div>
 </section>
 
-<!-- 9. 料金 -->
+<!-- 7. 料金 -->
 <section id="price">
-  <div class="container">
+  <div class="container narrow">
     <p class="sec-label center">料金</p>
-    <h2 class="sec-title center">サイトの規模に、合わせて選べます。</h2>
-    <p class="sec-lead center">お問い合わせいただければ、お見積もりをお出しします。</p>
+    <h2 class="sec-title center">料金の目安</h2>
+    <p class="sec-lead center">サイトの規模に、あわせてお見積もりします。</p>
     <div class="price-grid">
       <div class="price">
-        <p class="price-badge"></p>
-        <h3>ライト</h3>
-        <p class="price-target">コーポレートサイト（〜10ページ）</p>
+        <h3>引っ越し費用</h3>
+        <p class="price-desc">いまのサイトを、新しいしくみへ移します。</p>
         <p class="price-amount">○○万円<small>〜（税別）</small></p>
-        <p class="price-note">目安期間：約1か月</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i>Next.jsへの書き換え</li>
-          <li><i class="fa-solid fa-check"></i>Cloudflareの初期設定</li>
-          <li><i class="fa-solid fa-check"></i>お問い合わせフォーム</li>
-        </ul>
-      </div>
-      <div class="price featured">
-        <p class="price-badge">いちばん選ばれています</p>
-        <h3>スタンダード</h3>
-        <p class="price-target">ブログ・お知らせあり（〜30ページ）</p>
-        <p class="price-amount">○○万円<small>〜（税別）</small></p>
-        <p class="price-note">目安期間：約1.5か月</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i>ライトの内容すべて</li>
-          <li><i class="fa-solid fa-check"></i>ヘッドレスCMSの導入</li>
-          <li><i class="fa-solid fa-check"></i>記事データの移行</li>
-          <li><i class="fa-solid fa-check"></i>URLの引き継ぎ設定</li>
-        </ul>
       </div>
       <div class="price">
-        <p class="price-badge"></p>
-        <h3>プレミアム</h3>
-        <p class="price-target">大規模・独自機能あり</p>
-        <p class="price-amount">個別見積もり</p>
-        <p class="price-note">目安期間：ご相談</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i>スタンダードの内容すべて</li>
-          <li><i class="fa-solid fa-check"></i>会員機能・検索などの再構築</li>
-          <li><i class="fa-solid fa-check"></i>デザインのリニューアル</li>
-        </ul>
+        <h3>見守りプラン</h3>
+        <p class="price-desc">公開後の監視や、ちょっとした修正をお任せいただけます。</p>
+        <p class="price-amount">月額 ○○万円<small>〜（税別）</small></p>
       </div>
     </div>
-    <div class="running">
-      <div>
-        <h3>運用・保守プラン（月額）</h3>
-        <p>Cloudflareの管理、監視、小さな修正をまとめてお任せいただけます。</p>
-      </div>
-      <p class="running-amount">月額 ○○万円〜</p>
-    </div>
-    <p class="memo center">※金額・プラン構成は、見積もりロジックが固まりしだい確定</p>
+    <p class="price-note center">※ページ数や機能によって、変わります。</p>
+    <p class="memo center">※金額は、見積もりロジックが固まりしだい確定</p>
   </div>
 </section>
 
-<!-- 10. 事例 -->
-<section class="bg-sub">
-  <div class="container">
-    <p class="sec-label center">移行事例</p>
-    <h2 class="sec-title center">移行したサイトの、いま</h2>
-    <p class="sec-lead center">業種や規模を問わず、移行を進めています。</p>
-    <div class="case-grid">
-      <div class="case">
-        <div class="ph ph-case"><i class="fa-regular fa-image"></i>サイト画像</div>
-        <p class="case-tag">製造業／コーポレートサイト</p>
-        <h3>株式会社○○ 様</h3>
-        <div class="case-data"><div>表示速度<strong>○倍</strong></div><div>月額費用<strong>−○%</strong></div></div>
-      </div>
-      <div class="case">
-        <div class="ph ph-case"><i class="fa-regular fa-image"></i>サイト画像</div>
-        <p class="case-tag">医療／クリニックサイト</p>
-        <h3>○○クリニック 様</h3>
-        <div class="case-data"><div>表示速度<strong>○倍</strong></div><div>月額費用<strong>−○%</strong></div></div>
-      </div>
-      <div class="case">
-        <div class="ph ph-case"><i class="fa-regular fa-image"></i>サイト画像</div>
-        <p class="case-tag">サービス業／オウンドメディア</p>
-        <h3>株式会社○○ 様</h3>
-        <div class="case-data"><div>表示速度<strong>○倍</strong></div><div>月額費用<strong>−○%</strong></div></div>
-      </div>
-    </div>
-    <p class="memo center">※事例がそろうまでは、Geetの制作実績、または自社サイトの移行例で代替</p>
-  </div>
-</section>
-
-<!-- 11. FAQ -->
-<section id="faq">
+<!-- 8. FAQ -->
+<section class="bg-sub" id="faq">
   <div class="container narrow">
     <p class="sec-label center">よくある質問</p>
     <h2 class="sec-title center">よくある質問</h2>
     <dl class="faq" style="margin-top:40px;">
-      <dt><span><i class="fa-solid fa-q"></i>デザインは、変わりますか。</span><i class="fa-solid fa-plus"></i></dt>
-      <dd>基本は、いまのデザインをそのまま再現します。ご希望があれば、リニューアルも同時に進められます。</dd>
+      <dt><span><i class="fa-solid fa-q"></i>見た目は、変わりますか。</span><i class="fa-solid fa-plus"></i></dt>
+      <dd>基本は、いまのまま引っ越します。ご希望があれば、デザインの見直しも同時に進められます。</dd>
       <dt><span><i class="fa-solid fa-q"></i>自分たちで、記事を更新できますか。</span><i class="fa-solid fa-plus"></i></dt>
-      <dd>はい、できます。使いやすい管理画面を用意し、操作方法もお伝えします。</dd>
-      <dt><span><i class="fa-solid fa-q"></i>検索順位は、下がりませんか。</span><i class="fa-solid fa-plus"></i></dt>
-      <dd>URLを引き継ぎ、必要な転送設定をおこないます。表示が速くなるぶん、プラスに働くことも多いです。</dd>
-      <dt><span><i class="fa-solid fa-q"></i>移行中、サイトは止まりますか。</span><i class="fa-solid fa-plus"></i></dt>
-      <dd>止まりません。新しいサイトを別に用意し、最後に切り替えます。</dd>
-      <dt><span><i class="fa-solid fa-q"></i>ECサイトや、会員サイトも対応できますか。</span><i class="fa-solid fa-plus"></i></dt>
-      <dd>機能によって、進め方が変わります。まずは、お気軽にご相談ください。</dd>
+      <dd>はい、できます。使いやすい管理画面を用意し、使い方もお伝えします。</dd>
+      <dt><span><i class="fa-solid fa-q"></i>Googleの検索順位は、下がりませんか。</span><i class="fa-solid fa-plus"></i></dt>
+      <dd>ページのアドレスを引き継ぐので、影響はおさえられます。表示が速くなるぶん、良い方向に働くことも多いです。</dd>
       <dt><span><i class="fa-solid fa-q"></i>他社がつくったサイトでも、大丈夫ですか。</span><i class="fa-solid fa-plus"></i></dt>
-      <dd>はい、大丈夫です。管理画面とサーバーの情報があれば、調査から始められます。</dd>
+      <dd>はい、大丈夫です。まずは、いまの状況をお聞かせください。</dd>
     </dl>
   </div>
 </section>
 
-<!-- 12. 最終CTA -->
-<section class="bg-sub" id="cta">
+<!-- 9. 最終CTA -->
+<section id="cta">
   <div class="container">
     <div class="cta-box">
       <p class="sec-label">次の脆弱性が、見つかる前に</p>
       <h2>WordPressの不安は、<br>今日で終わりにしませんか。</h2>
       <p>ご相談は、無料です。お気軽に、お問い合わせください。</p>
-      <div class="btn-row">
-        <a href="#" class="btn"><i class="fa-regular fa-envelope"></i>お問い合わせ</a>
-      </div>
-      <p class="cta-sub">オンラインでの、30分のご相談も承っています。</p>
+      <a href="#" class="btn"><i class="fa-regular fa-envelope"></i>お問い合わせ</a>
     </div>
   </div>
 </section>
 
 <!-- フッター -->
-<footer>
+<footer class="bg-sub">
   <div class="container">
     <div>
       <div class="ph logo" style="margin-bottom:16px;">ロゴ</div>
